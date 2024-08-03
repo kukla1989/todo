@@ -1,0 +1,22 @@
+@import './style/vars';
+
+@import './components/Main/main.scss';
+@import './components/TodoForm/todoForm.scss';
+@import './components/Todo/todo.scss';
+
+
+.app {
+  padding: 100px;
+  background-color: $mainViolet;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
