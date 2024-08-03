@@ -1,0 +1,26 @@
+$inputHeight: 40px;
+
+.todo-form {
+  background-color: $darkViolet;
+  display: flex;
+
+  &__input {
+    height: $inputHeight;
+    min-width: 200px;
+    padding: 7px;
+    box-sizing: border-box;
+
+    background-color: $darkViolet;
+    border: 1px solid $mainViolet;
+    color: $mainWhite;
+    outline: none;
+  }
+
+  &__submit {
+    height: $inputHeight;
+    width: 70px;
+    background-color: $mainViolet;
+    color: $mainWhite;
+    border: none;
+  }
+}
