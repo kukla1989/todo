@@ -1,8 +1,9 @@
 import React from "react";
 
-const DeleteSVG = ({ size=20, color='white' }) => {
+const DeleteSVG = ({ size=20, color='white', deleteTodo, id }) => {
   return (
     <svg
+      onClick={() => deleteTodo(id)}
       xmlns="http://www.w3.org/2000/svg"
       xlinkHref="http://www.w3.org/1999/xlink"
       width={size + 'px'}
@@ -16,9 +17,9 @@ const DeleteSVG = ({ size=20, color='white' }) => {
       <g
         id="Page-1"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g
           id="Dribbble-Light-Preview"

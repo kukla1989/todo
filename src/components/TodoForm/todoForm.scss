@@ -1,11 +1,11 @@
-$inputHeight: 40px;
+$inputSubmitHeight: 50.5px;
 
 .todo-form {
   background-color: $darkViolet;
   display: flex;
 
   &__input {
-    height: $inputHeight;
+    height: $inputSubmitHeight;
     min-width: 200px;
     padding: 7px;
     box-sizing: border-box;
@@ -17,7 +17,7 @@ $inputHeight: 40px;
   }
 
   &__submit {
-    height: $inputHeight;
+    height: $inputSubmitHeight;
     width: 70px;
     background-color: $mainViolet;
     color: $mainWhite;
