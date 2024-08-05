@@ -1,9 +1,14 @@
 import React from "react";
 
 const EditSVG = ({ size = 20, color = "white", startEdit }) => {
+  const onEdit = e => {
+    e.stopPropagation(); 
+    startEdit()
+  }
+  
   return (
     <svg
-      onClick={startEdit}
+      onClick={onEdit}
       width={size + "px"}
       viewBox="0 0 24 24"
       fill="none"

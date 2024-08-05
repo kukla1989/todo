@@ -1,9 +1,14 @@
 import React from "react";
 
 const DeleteSVG = ({ size=20, color='white', deleteTodo, id }) => {
+  const onDelete = e => {
+    e.stopPropagation(); 
+    deleteTodo(id)
+  }
+  
   return (
     <svg
-      onClick={() => deleteTodo(id)}
+      onClick={onDelete}
       xmlns="http://www.w3.org/2000/svg"
       xlinkHref="http://www.w3.org/1999/xlink"
       width={size + 'px'}

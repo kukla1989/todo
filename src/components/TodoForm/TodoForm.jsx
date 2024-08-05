@@ -5,7 +5,7 @@ const TodoForm = ({ addTodo, todo = null, editTodo }) => {
 
   useEffect(() => {
     if (todo) {
-      setNewTask(todo[0]);
+      setNewTask(todo.task);
     }
   }, []);
 
@@ -13,8 +13,6 @@ const TodoForm = ({ addTodo, todo = null, editTodo }) => {
     e.preventDefault();
     todo ? editTodo(todo, newTask) : addTodo(newTask);
     setNewTask("");
-
-    // console.log(todo, "todo");
   };
 
   return (
