@@ -1,9 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteByID } from "../../features/todo/todoSlice";
 
-const DeleteSVG = ({ size=20, color='white', deleteTodo, id }) => {
+const DeleteSVG = ({ size=20, color='white', id }) => {
+  const dispatch = useDispatch();
+
   const onDelete = e => {
     e.stopPropagation(); 
-    deleteTodo(id)
+    dispatch(deleteByID(id));
   }
   
   return (

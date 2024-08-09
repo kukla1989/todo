@@ -2,7 +2,7 @@ import React from "react";
 import DeleteSVG from "../../style/SVGs/DeleteSVG";
 import EditSVG from "../../style/SVGs/EditSVG";
 
-const Todo = ({ todo, deleteTodo, startEditTodo, toggleIsCompleted }) => {
+const Todo = ({ todo, startEditTodo, toggleIsCompleted }) => {
   const { id, isCompleted } = todo;
   const startEdit = () => startEditTodo(id);
   const todoToggleIsCompleted = () => toggleIsCompleted(id);
@@ -20,7 +20,7 @@ const Todo = ({ todo, deleteTodo, startEditTodo, toggleIsCompleted }) => {
 
       <div className="todo__change-buttons">
         <EditSVG startEdit={startEdit} />
-        <DeleteSVG deleteTodo={deleteTodo} id={id} />
+        <DeleteSVG id={id} />
       </div>
     </div>
   );

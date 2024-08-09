@@ -1,13 +1,26 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
+import { add } from "../../features/todo/todoSlice";
 
-const TodoForm = ({ addTodo, todo = null, editTodo }) => {
+const TodoForm = ({ todo = null, editTodo }) => {
   const [newTask, setNewTask] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (todo) {
       setNewTask(todo.task);
     }
   }, []);
+
+  const addTodo = (task) => {
+    if (!task) {
+      return;
+    }
+
+    const newTodo = { task: task, id: uuidv4(), isCompleted: false };
+    dispatch(add(newTodo));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
